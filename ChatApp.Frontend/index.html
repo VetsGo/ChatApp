@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Real-Time Chat</h1>
+        </div>
+
+        <div class="messages-container" id="messagesContainer">
+            <div class="loading-messages">Завантаження історії...</div>
+        </div>
+
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="usernameInput" 
+                placeholder="Ваше ім'я" 
+                maxlength="100"
+                autocomplete="off"
+            />
+            <input 
+                type="text" 
+                id="messageInput" 
+                placeholder="Введіть повідомлення" 
+                maxlength="1000"
+                autocomplete="off"
+            />
+            <button id="sendButton" disabled>Відправити</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>

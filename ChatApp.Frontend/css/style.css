@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    width: 100%;
+    height: 100%;
+    background: green;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.loading-messages {
+    text-align: center;
+    color: gray;
+    padding: 20px;
+    width: 100%;
+}
+
+.message {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid;
+    max-width: 70%;
+}
+
+.message.sentiment-positive {
+    border-color: green;
+}
+
+.message.sentiment-negative {
+    border-color: red;
+}
+
+.message.sentiment-neutral {
+    border-color: gray;
+}
+
+.message-username {
+    font-weight: bold;
+    color: gray;
+}
+
+.message-timestamp {
+    color: lightslategray;
+}
+
+.sentiment-indicator {
+    font-size: 1.4em;
+}
+
+.message-content {
+    color: black;
+    line-height: 1.5;
+    word-wrap: break-word;
+    margin-bottom: 8px;
+}
+
+.sentiment-scores {
+    display: flex;
+    gap: 12px;
+    font-size: 0.8em;
+    align-items: center;
+}
+
+.sentiment-scores .score {
+    padding: 0;
+}
+
+.sentiment-scores .score.positive {
+    color: green;
+}
+
+.sentiment-scores .score.negative {
+    color: red;
+}
+
+.sentiment-scores .score.neutral {
+    color: gray;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    background: white;
+}
+
+#usernameInput {
+    width: 150px;
+    padding: 12px;
+    border: 2px solid #ebebeb;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#usernameInput:focus {
+    outline: none;
+    border-color: green;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ebebeb;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#messageInput:focus {
+    outline: none;
+    border-color: green;
+}
+
+#sendButton {
+    padding: 12px 30px;
+    background: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#sendButton:hover:not(:disabled) {
+    background: green;
+}
+
+#sendButton:disabled {
+    opacity: 0.5;
+}
